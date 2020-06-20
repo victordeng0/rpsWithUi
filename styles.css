@@ -1,0 +1,46 @@
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    color: #f6a6b9;
+    animation-name: title;
+    animation-duration: 4s;
+}
+@keyframes title {
+    0% {color: ff7f50}
+    50% {color: white;}
+    100% {color: ff7f50}
+}
+    
+
+body {
+    background-color: black;
+}
+
+#button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+button {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: 20px;
+    border-color: #f6a6b9;
+    color: black;
+    background-color: #f6a6b9;
+    
+}
+
+button:hover {
+    transform: scale(1.1);
+
+}
+

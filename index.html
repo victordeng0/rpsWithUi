@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>rockPaperScissor with UI</title>
     <meta charset= 'UTF-8'/>
 </head>
 <body>
+    <div id="title">
    <h1>ROCK PAPER SCISSORS</h1>
-
+</div>
    <div id="container"></div>
 <div id="button">
     <button class = "rock">Rock</button>
     <button class = "scissor">Scissor</button>
     <button class = "paper">Paper</button>
 </div>
+
 <script>
 function computerPlay() {
     
@@ -110,6 +114,7 @@ const rock = document.querySelector('.rock');
 const btn = document.querySelector('#button');
 
 
+
 rock.addEventListener('click', () =>  {
     let playerSelection = 'rock';
     const computerSelection = computerPlay()
@@ -139,7 +144,7 @@ scissor.addEventListener('click', () => {
     console.log(game(playerSelection, computerSelection))
 })
 
-console.log(winner());
+
 
 
 
