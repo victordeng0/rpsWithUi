@@ -37,6 +37,7 @@ button {
     color: black;
     background-color: #f6a6b9;
     
+    
 }
 
 button:hover {
@@ -44,3 +45,7 @@ button:hover {
 
 }
 
+.displayScore {
+    color: white;
+    bottom: 10px;
+}

@@ -10,11 +10,17 @@
     <div id="title">
    <h1>ROCK PAPER SCISSORS</h1>
 </div>
-   <div id="container"></div>
-<div id="button">
+   
+
+
+   <div id="button">
     <button class = "rock">Rock</button>
     <button class = "scissor">Scissor</button>
     <button class = "paper">Paper</button>
+</div>
+
+<div id="container">
+
 </div>
 
 <script>
@@ -117,11 +123,17 @@ const btn = document.querySelector('#button');
 
 rock.addEventListener('click', () =>  {
     let playerSelection = 'rock';
-    const computerSelection = computerPlay()
+    const computerSelection = computerPlay();
     btn.onclick = () => playRound(playerSelection, computerSelection);
-    console.log(playRound(playerSelection, computerSelection))
-    console.log('You chose: ' + playerSelection, ';Computer chose: ' + computerSelection)
-    console.log(game(playerSelection, computerSelection))
+    
+    const container = document.querySelector('#container');
+    const score = document.createElement('p');
+   
+    score.classList.add('displayScore');
+    score.textContent = 'You chose: ' + playerSelection + '; Computer chose: ' + computerSelection + ' | ' + game(playerSelection, computerSelection) + ' | ' + playRound(playerSelection, computerSelection)
+   
+    container.appendChild(score);
+
 });
 
 const paper = document.querySelector('.paper');
@@ -129,9 +141,14 @@ paper.addEventListener('click', () => {
     let playerSelection = 'paper';
     const computerSelection = computerPlay()
     btn.onclick = () => playRound(playerSelection, computerSelection);
-    console.log(playRound(playerSelection, computerSelection))
-    console.log('You chose: ' + playerSelection, ';Computer chose: ' + computerSelection)
-    console.log(game(playerSelection, computerSelection))
+    
+    const container = document.querySelector('#container');
+    const score = document.createElement('p');
+   
+    score.classList.add('displayScore');
+    score.textContent = 'You chose: ' + playerSelection + '; Computer chose: ' + computerSelection + ' | ' + game(playerSelection, computerSelection) + ' | ' + playRound(playerSelection, computerSelection)
+   
+    container.appendChild(score);
 });
 
 const scissor = document.querySelector('.scissor');
@@ -139,9 +156,14 @@ scissor.addEventListener('click', () => {
     let playerSelection = 'scissor';
     const computerSelection = computerPlay();
     btn.onclick = () => playRound(playerSelection, computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-    console.log('You chose: ' + playerSelection, ';Computer chose: ' + computerSelection)
-    console.log(game(playerSelection, computerSelection))
+    
+    const container = document.querySelector('#container');
+    const score = document.createElement('p');
+   
+    score.classList.add('displayScore');
+    score.textContent = 'You chose: ' + playerSelection + '; Computer chose: ' + computerSelection + ' | ' + game(playerSelection, computerSelection) + ' | ' + playRound(playerSelection, computerSelection)
+   
+    container.appendChild(score);
 })
 
 
