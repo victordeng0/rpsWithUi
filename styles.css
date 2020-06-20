@@ -36,6 +36,7 @@ button {
     border-color: #f6a6b9;
     color: black;
     background-color: #f6a6b9;
+    margin-top: -30px;
     
     
 }
@@ -48,4 +49,20 @@ button:hover {
 .displayScore {
     color: white;
     bottom: 10px;
+    font-family: arial;
+    font-size: 16px;
+    text-align: center;
+}
+
+.computer, .player {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style:solid;
+    border-color: #f5a6b9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    
 }

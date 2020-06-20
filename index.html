@@ -10,7 +10,8 @@
     <div id="title">
    <h1>ROCK PAPER SCISSORS</h1>
 </div>
-   
+    
+<div id="winnerMessage"></div>
 
 
    <div id="button">
@@ -108,13 +109,19 @@ function game(playerSelection, computerSelection) {
 // }
 
 
-function winner() {
-    if (x == 3) {
-        return 'COMPUTER WINS'
-    } else if (y == 3) {
-        return 'PLAYER WINS'
-    }
-}
+// function winner() {
+//     if (x == 3) {
+//         return 'COMPUTER WINS'
+//     } else if (y == 3) {
+//         return 'PLAYER WINS'
+//     } else {
+//         return 'Keep Going!';
+//     }
+// }
+//Problem: winner function undefined and not returning strings even though x and y are incrementing
+
+// console.log(winner());
+
 
 const rock = document.querySelector('.rock');
 const btn = document.querySelector('#button');
@@ -133,6 +140,7 @@ rock.addEventListener('click', () =>  {
     score.textContent = 'You chose: ' + playerSelection + '; Computer chose: ' + computerSelection + ' | ' + game(playerSelection, computerSelection) + ' | ' + playRound(playerSelection, computerSelection)
    
     container.appendChild(score);
+    winner()
 
 });
 
@@ -149,6 +157,7 @@ paper.addEventListener('click', () => {
     score.textContent = 'You chose: ' + playerSelection + '; Computer chose: ' + computerSelection + ' | ' + game(playerSelection, computerSelection) + ' | ' + playRound(playerSelection, computerSelection)
    
     container.appendChild(score);
+    winner();
 });
 
 const scissor = document.querySelector('.scissor');
@@ -164,10 +173,29 @@ scissor.addEventListener('click', () => {
     score.textContent = 'You chose: ' + playerSelection + '; Computer chose: ' + computerSelection + ' | ' + game(playerSelection, computerSelection) + ' | ' + playRound(playerSelection, computerSelection)
    
     container.appendChild(score);
+    winner()
 })
 
+//Attempting to recreate the winner function within the DOM
+function winner() {
+if (x == 3) {
+    const computerWin = document.querySelector('#winnerMessage');
+    const message = document.createElement('p');
 
+    message.classList.add('computer')
+    message.textContent = 'COMPUTER WINS'
+    winnerMessage.appendChild(message);
+} else if (y == 3) {
+    const computerWin = document.querySelector('#winnerMessage');
+    const message = document.createElement('p');
 
+    message.classList.add('player')
+    message.textContent = 'PLAYER WINS'
+    winnerMessage.appendChild(message);
+} else {
+    console.log('First to get 3 points is the Winner!');
+}
+}
 
 
 
